@@ -32,7 +32,12 @@ export class NavMenu extends Component {
               <NavItem>
                 <Glyphicon glyph='th-list' /> Fetch data
               </NavItem>
-            </LinkContainer>
+                    </LinkContainer>
+                    <LinkContainer to={'/AddTutorial'}>
+                        <NavItem>
+                            <Glyphicon glyph='th-list' /> User Tutorial (Basic CRUD)
+              </NavItem>
+                    </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
