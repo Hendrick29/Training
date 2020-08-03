@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
-import { Icon, Header, Form, Grid, Button, Modal, Table, Dropdown, Tab } from 'semantic-ui-react';
+import { Segment, Button, Icon, Grid, Menu, Accordion, Table, Divider, Modal, Form, Input, Dropdown, TextArea, Header } from 'semantic-ui-react';
+import { ModalSample } from '../Tutorial Components/ModalSample';
 
 
 
@@ -9,6 +10,8 @@ export class AddTutorial extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            modalType: null,
+            showModal: false,
             currentCount: 0,
             data: [],
             employees: [],
@@ -20,7 +23,9 @@ export class AddTutorial extends Component {
             displayPassword: "Password",
         };
     }
-
+    closeModal() {
+        this.setState({ showModal: false });
+    }
     componentDidMount() {
 
     }
@@ -61,38 +66,8 @@ export class AddTutorial extends Component {
             <div>
                 <Grid>
                     <Header textAlign="left" as="h2">Add User </Header>
+                    <Button onClick={() => { this.setState({ showModal: true }); this.setState({ modalType: "Create User" }); }} color="green">Create User</Button>
                     <Grid.Column>
-                        <Form>
-                    <Form.Group widths="equal">
-                        <Form.Field>
-                            <label>Username:</label>
-                            <input name="username" onChange={this.saveEditText} />
-                                </Form.Field>
-                                <Form.Field>
-                                    <label>Password:</label>
-                                    <input name="password" type="password" onChange={this.saveEditText} />
-                                </Form.Field>
-                        <Form.Field>
-                            <label>First Name:</label>
-                            <input name="firstName"  onChange={this.saveEditText} />
-                        </Form.Field>
-                        <Form.Field>
-                            <label>Last Name:</label>
-                            <input name="lastName"  onChange={this.saveEditText} />
-                        </Form.Field>
-                        <Form.Field>
-                            <label>Email:</label>
-                            <input name="email"  onChange={this.saveEditText} />
-                        </Form.Field>
-                    </Form.Group>
-                            <Button onClick={() => this.editUser()} color='green'>
-                                <Icon name='save outline' /> Save
-						</Button>
-                
-                            
-                        </Form>
-                        <br></br>
-                        <br></br>
                         <Header textAlign="left" as="h2">Log In </Header>
                         <Form>
                             <Form.Group widths="equal">
@@ -119,7 +94,13 @@ export class AddTutorial extends Component {
                     </Grid.Column>
                     
                     </Grid>
-
+                {
+                    this.state.showModal  && <ModalSample
+                        closeModal={this.closeModal.bind(this)}//function
+                        modalType={this.state.modalType}
+                        modalStatus={this.state.showModal}      
+                    />
+                }
             </div>
         );
     }
