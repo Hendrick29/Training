@@ -7,6 +7,8 @@ import { Counter } from './components/Counter';
 import { AddTutorial } from './Tutorial Components/AddTutorial';
 import { JSsample } from './Tutorial Components/JSsample';
 
+import 'semantic-ui-css/semantic.min.css'
+
 export default class App extends Component {
   displayName = App.name
 
