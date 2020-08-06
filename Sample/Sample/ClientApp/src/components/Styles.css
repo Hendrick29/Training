@@ -1,0 +1,420 @@
+﻿body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+    .loginform, .Registerform {
+        height: 100vh;
+    }
+}
+
+.bgcolor {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*background-color: #CEBCA7;*/
+    bottom: 0%;
+}
+.bigModal {
+    max-height: 640px;
+}
+
+    .bigModal .bigModalContent {
+        height: 220px;
+        max-height: 550px;
+    }
+
+.loginform {
+    background-color: #F0F2EF;
+    position: absolute;
+    top: 10%;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 75vh;
+    width: 90%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.login-title {
+    text-align: center;
+    color: #0B5563;
+    width: 100%;
+    padding: 15px;
+    font-size: 35px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.loginbutton {
+    background-color: #A0AAB2 !important;
+    border: none;
+    border-radius: 4px;
+    color: white !important;
+    padding: 10px;
+    width: 100%;
+    height: 15%;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px !important;
+}
+
+.loginform Input {
+    width: 100%;
+    width: 250px;
+    height: 35%;
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    border-bottom: 1px solid #0B5563;
+}
+
+.loginform label {
+    font-size: 20px;
+    padding: 10px;
+    color: #0B5563;
+}
+
+.loginform a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.Registerform {
+    background-color: #F0F2EF;
+    position: absolute;
+    top: 2%;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 100vh;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.registerbutton {
+    background-color: #A0AAB2 !important;
+    border: none;
+    border-radius: 4px;
+    color: white !important;
+    width: 100%;
+    height: 5%;
+    width: 250px;
+    text-align: center;
+    line-height: 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px !important;
+}
+
+.Registerform label {
+    font-size: 13px;
+    color: #0B5563;
+}
+
+.Registerform input {
+    width: 100%;
+    width: 250px;
+    height: 5%;
+    padding: 1px;
+    border: 0;
+    border-radius: 4px;
+    border-bottom: 1px solid #0B5563;
+}
+
+.registertitle {
+    top: 3%;
+    text-align: center;
+    color: #0B5563;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.Registerform a {
+    top: 5%;
+    text-align: center;
+    width: 100%;
+}
+
+    .Registerform a:hover {
+        cursor: pointer;
+    }
+
+.featuregamestitle, .currentgamestitle, .recentgamestitle {
+    height: 50vh;
+    width: 100%;
+}
+
+.featuregamestitle {
+    margin-top: 70px;
+}
+
+.carousel {
+    width: 100%;
+    left: 0;
+    align-self: center;
+    top: 1%;
+}
+
+.buttonbet {
+    color: black !important;
+    font-size: 16px !important;
+    width: 150px;
+    font-weight: bolder;
+    height: 5%;
+    border-radius: 4px;
+    /*position: absolute;*/
+    bottom: 20%;
+    display: inline-block;
+}
+
+.carousel .slide .legend {
+    opacity: 1 !important;
+    color: white !important;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    padding: 0px;
+    bottom: 0px;
+    left: 45%;
+    margin-left: -45%;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 10px !important;
+}
+
+.carousel .thumbs {
+    visibility: hidden;
+}
+
+.carousel .control-dots {
+    position: relative;
+    bottom: 0;
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+    visibility: hidden;
+}
+
+.currentgamestitle {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.glyphicon-pushpin:before {
+    content: "\E146";
+    padding-right: 10px;
+    /* margin-bottom: 5px; */
+}
+
+.glyphicon-star:before {
+    content: "\E006";
+    padding-right: 10px;
+}
+
+.glyphicon-time:before {
+    content: "\E023";
+    padding-right: 10px;
+}
+
+.background {
+    height: 100%;
+    background-size: cover;
+}
+
+.profileform {
+    background-color: #F0F2EF;
+    margin-top: 70px;
+    margin: 65px auto;
+    border-radius: 10px;
+    height: 95vh;
+    width: 100%;
+    padding: 40px;
+    display: inline-block;
+    flex-direction: column;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.profiletitle {
+    margin-top: -25px;
+}
+
+.h2profiletitle {
+    font-weight: bolder;
+    margin-top: -25px;
+}
+
+.ui.form input {
+    width: 100%;
+    vertical-align: top;
+    height: 25px;
+}
+
+.editprofileform {
+    background-color: #F0F2EF;
+    margin-top: 70px;
+    margin: 65px auto;
+    border-radius: 10px;
+    height: 90vh;
+    width: 100%;
+    padding: 40px;
+    display: inline-block;
+    flex-direction: column;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.editprofiletitle {
+    margin-top: -25px;
+}
+
+.h2editprofiletitle {
+    font-weight: bolder;
+    margin-top: -25px;
+}
+
+.tableBet {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-top: -3px;
+    width: 100%;
+    max-height: 50px;
+    margin-left: 15px;
+}
+
+    .tableBet td, .tableBet th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .tableBet th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+
+.recentgamestitle {
+    margin-top: 40px;
+}
+
+.tablerecentBet {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-top: -3px;
+    margin-right: 5px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+    .tablerecentBet td, .tablerecentBet th {
+        border: 1px solid #ddd;
+        padding: 3px;
+    }
+
+    .tablerecentBet th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+
+.gameform {
+    background-color: grey;
+    margin: 0 auto;
+    /*height: 40vh;*/
+    width: 100%;
+    margin-top: 50px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gametitle {
+    text-align: left;
+    width: 100%;
+    /*width:200px;*/
+    /*margin-left:-10px;*/
+}
+
+.detail {
+    background: rgba(0,0,0,0.6) !important;
+    position: absolute;
+    width: 100%;
+    top: 28%;
+}
+
+    .detail p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+    }
+
+.gamebackground {
+    height: 25vh;
+}
+
+    .gamebackground img {
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        /*margin-left: 15px;*/
+        margin-top: -3px;
+    }
+
+.gamebetboard {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    position: relative;
+    background: white;
+}
+
+.title {
+    color: rgba(0,0,0,1) !important;
+}
+
+.active {
+    color: crimson !important;
+}
+
+.bettingbutton {
+    height: 75vh;
+    max-height: 75vh;
+    overflow-y: scroll;
+    border-radius: 0px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

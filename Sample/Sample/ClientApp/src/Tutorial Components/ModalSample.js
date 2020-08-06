@@ -62,30 +62,30 @@ export class ModalSample extends Component {
             case 'Create User':
                 return (
                     <div>
-                        <Modal style={{ height: 320 }} open={this.props.modalStatus}>
+                        <Modal className="scrolling bigModal" style={{ overflow: "initial", height: 320 }} open={this.props.modalStatus}>
                             <Modal.Header>Add User</Modal.Header>
-                            <Modal.Content>
+                            <Modal.Content className="bigModalContent">
                                 <Form>
                                     <Form.Group widths="equal">
                                         <Form.Field>
                                             <label>Username:</label>
-                                            <input name="username" onChange={this.saveEditText} />
+                                            <input name="username" onChange={this.props.saveEditText} />
                                         </Form.Field>
                                         <Form.Field>
                                             <label>Password:</label>
-                                            <input name="password" type="password" onChange={this.saveEditText} />
+                                            <input name="password" type="password" onChange={this.props.saveEditText} />
                                         </Form.Field>
                                         <Form.Field>
                                             <label>First Name:</label>
-                                            <input name="firstName" onChange={this.saveEditText} />
+                                            <input name="firstName" onChange={this.props.saveEditText} />
                                         </Form.Field>
                                         <Form.Field>
                                             <label>Last Name:</label>
-                                            <input name="lastName" onChange={this.saveEditText} />
+                                            <input name="lastName" onChange={this.props.saveEditText} />
                                         </Form.Field>
                                         <Form.Field>
                                             <label>Email:</label>
-                                            <input name="email" onChange={this.saveEditText} />
+                                            <input name="email" onChange={this.props.saveEditText} />
                                         </Form.Field>
                                     </Form.Group>
                                     
@@ -95,9 +95,55 @@ export class ModalSample extends Component {
                             </Modal.Content>
 
                             <Modal.Actions>
-                                <Button onClick={() => this.editUser()} color='green'>
+                                <Button onClick={() => this.props.closeModal()} color='red'>
+                                    <Icon name='cancel' /> Close
+						        </Button>
+                                <Button onClick={() => this.props.editUser()} color='green'>
                                     <Icon name='save outline' /> Save
 						        </Button>
+                            </Modal.Actions>
+                        </Modal> {/*choice*/}
+
+
+                    </div>
+                );
+            case 'View User':
+                return (
+                    <div>
+                        <Modal className="scrolling bigModal" style={{ overflow: "initial", height: 320 }} open={this.props.modalStatus}>
+                            <Modal.Header>View User</Modal.Header>
+                            <Modal.Content className="bigModalContent">
+                                <Form>
+                                    <Form.Group widths="equal">
+                                        <Form.Field>
+                                            <label>Username:</label>
+                                            <label>{this.props.savedDetails.username}</label>   
+                                        </Form.Field>
+                                        <Form.Field>
+                                            <label>Password:</label>
+                                            <label>{this.props.savedDetails.password}</label>   
+                                        </Form.Field>
+                                        <Form.Field>
+                                            <label>First Name:</label>
+                                            <label>{this.props.savedDetails.firstName}</label>   
+                                        </Form.Field>
+                                        <Form.Field>
+                                            <label>Last Name:</label>
+                                            <label>{this.props.savedDetails.lastName}</label>   
+                                        </Form.Field>
+                                        <Form.Field>
+                                            <label>Email:</label>
+                                            <label>{this.props.savedDetails.email}</label>   
+                                        </Form.Field>
+                                    </Form.Group>
+                                </Form>
+                            </Modal.Content>
+
+                            <Modal.Actions>
+                                <Button onClick={() => this.props.closeModal()} color='red'>
+                                    <Icon name='cancel' /> Close
+						        </Button>
+
                             </Modal.Actions>
                         </Modal> {/*choice*/}
 
