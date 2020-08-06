@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import { Segment, Button, Icon, Grid, Menu, Accordion, Table, Divider, Modal, Form, Input, Dropdown, TextArea, Header } from 'semantic-ui-react';
+import { Segment, Button, Icon, Grid, Menu, Accordion, Table, Divider, Modal, Form, Input, Dropdown, TextArea, Header, Image } from 'semantic-ui-react';
 import { ModalSample } from '../Tutorial Components/ModalSample';
 
 
@@ -76,6 +76,7 @@ export class AddTutorial extends Component {
     
         return (
             <div>
+
                 <Grid columns="2">
 
                     <Grid.Column>
@@ -108,8 +109,10 @@ export class AddTutorial extends Component {
                                     </Form.Group>
                                 </Form>
                         </Form>
+
                     </Grid.Column>    
                 </Grid>
+
 
                 {
                     this.state.showModal  && <ModalSample

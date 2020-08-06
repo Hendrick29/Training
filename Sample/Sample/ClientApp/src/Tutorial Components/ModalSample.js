@@ -95,11 +95,13 @@ export class ModalSample extends Component {
                             </Modal.Content>
 
                             <Modal.Actions>
+
                                 <Button onClick={() => this.props.closeModal()} color='red'>
                                     <Icon name='cancel' /> Close
 						        </Button>
                                 <Button onClick={() => this.props.editUser()} color='green'>
                                     <Icon name='save outline' /> Save
+
 						        </Button>
                             </Modal.Actions>
                         </Modal> {/*choice*/}
