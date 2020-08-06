@@ -1,2 +1,5 @@
 
 *.lock
+Sample/.vs/Sample/v15/Server/sqlite3/storage.ide-shm
+*.ide-shm
+*.ide-shm
