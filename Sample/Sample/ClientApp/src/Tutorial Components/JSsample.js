@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import { Icon, Header, Form, Grid, Button, Modal, Table, Dropdown, Tab } from 'semantic-ui-react';
+import { Icon, Header, Form, Grid, Button, Modal, Table, Dropdown, Tab, Label, Image } from 'semantic-ui-react';
 
 
 
@@ -92,6 +92,7 @@ export class JSsample extends Component {
 
                         </Form>
                         <br></br>
+                        
                         <br></br>
                         <Header textAlign="left" as="h2">Log In </Header>
                         <Form>

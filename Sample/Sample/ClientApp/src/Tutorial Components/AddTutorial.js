@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import { Segment, Button, Icon, Grid, Menu, Accordion, Table, Divider, Modal, Form, Input, Dropdown, TextArea, Header } from 'semantic-ui-react';
+import { Segment, Button, Icon, Grid, Menu, Accordion, Table, Divider, Modal, Form, Input, Dropdown, TextArea, Header, Image } from 'semantic-ui-react';
 import { ModalSample } from '../Tutorial Components/ModalSample';
 
 
@@ -65,7 +65,9 @@ export class AddTutorial extends Component {
         return (
             <div>
                 <Grid>
+                    
                     <Header textAlign="left" as="h2">Add User </Header>
+                   
                     <Button onClick={() => { this.setState({ showModal: true }); this.setState({ modalType: "Create User" }); }} color="green">Create User</Button>
                     <Grid.Column>
                         <Header textAlign="left" as="h2">Log In </Header>
@@ -92,8 +94,16 @@ export class AddTutorial extends Component {
 						</Button>
                         </Form>
                     </Grid.Column>
-                    
-                    </Grid>
+                   
+)
+                </Grid>
+                <br></br>
+                <br></br>
+                <div>
+                    <Button primary>Primary</Button>
+                    <Button secondary>Secondary</Button>
+                </div>
+                
                 {
                     this.state.showModal  && <ModalSample
                         closeModal={this.closeModal.bind(this)}//function

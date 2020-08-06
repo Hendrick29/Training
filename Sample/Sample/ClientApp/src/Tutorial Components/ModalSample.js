@@ -96,7 +96,7 @@ export class ModalSample extends Component {
 
                             <Modal.Actions>
                                 <Button onClick={() => this.editUser()} color='green'>
-                                    <Icon name='save outline' /> Save
+                                    <Icon name='save outline' /> Saved
 						        </Button>
                             </Modal.Actions>
                         </Modal> {/*choice*/}

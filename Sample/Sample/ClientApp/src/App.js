@@ -7,6 +7,7 @@ import { Counter } from './components/Counter';
 import { AddTutorial } from './Tutorial Components/AddTutorial';
 import { JSsample } from './Tutorial Components/JSsample';
 
+
 import 'semantic-ui-css/semantic.min.css'
 
 export default class App extends Component {
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Route path='/fetchdata' component={FetchData} />
         <Route path='/AddTutorial' component={AddTutorial} />
         <Route path='/JSsample' component={JSsample} />
+        
       </Layout>
     );
   }
