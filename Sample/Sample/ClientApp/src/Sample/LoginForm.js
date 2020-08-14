@@ -1,14 +1,10 @@
 ﻿import React, { Component } from 'react';
-import { Segment, Button, Icon, Grid, Menu, Accordion, Table, Divider, Modal, Form, Input, Dropdown, TextArea, Header, Image } from 'semantic-ui-react';
-import { JSmodal } from '../Tutorial Components/JSmodal';
+import { Label, Message, Segment, Button, Icon, Grid, Menu, Accordion, Table, Divider, Modal, Form, Input, Dropdown, TextArea, Header, Image } from 'semantic-ui-react';
+import { ModalForm } from '../Sample/ModalForm';
 
-
-
-
-export class JSsample extends Component {
-
-    constructor(props) {
-        super(props);
+export class LoginForm extends Component {
+    constructor() {
+        super()
         this.state = {
             modalType: null,
             showModal: false,
@@ -21,7 +17,7 @@ export class JSsample extends Component {
             savedDetails: {},
             displayUser: "",
             displayPassword: "",
-        };
+        }
     }
     closeModal() {
         this.setState({ showModal: false });
@@ -42,6 +38,7 @@ export class JSsample extends Component {
         });
 
     }
+
     verify() {
         var object = this.state.userEditDetails;
         var object1 = this.state.savedDetails;
@@ -74,49 +71,51 @@ export class JSsample extends Component {
         });
     }
     render() {
-
         return (
-            <div>
-
-                <Grid columns="2">
-
+            <Segment placeholder>
+                <Grid columns={2} relaxed='very' stackable>
                     <Grid.Column>
-                        <Header textAlign="left" as="h2">Log In </Header>
-                        <Form>
-                            <Form.Group widths="equal">
-                                <Form.Field>
-                                    <label>Username:</label>
-                                    <input name="Inputusername" onChange={this.saveEditText} />
-                                </Form.Field>
-                                <Form.Field>
-                                    <label>Password:</label>
-                                    <input name="Inputpassword" type="password" onChange={this.saveEditText} />
-                                </Form.Field>
-                            </Form.Group>
-                            <Form>
-                                <Form.Group inline>
-                                    <Form.Field>
-                                        <Button onClick={() => this.verify()} color='green'>
-                                            <Icon name='save outline' /> Log In
-					        	</Button>
-                                    </Form.Field>
-                                    <Form.Field>
-                                        <Button onClick={() => { this.setState({ showModal: true }); this.setState({ modalType: "Create User" }); }} color="green"><Icon name='save outline' /> Create User</Button>
-                                    </Form.Field>
-                                    <Form.Field>
-                                        <Button onClick={() => { this.setState({ showModal: true }); this.setState({ modalType: "View User" }); }} color="green"><Icon name='eye' /> View User</Button>
-                                    </Form.Field>
+                        <Form >
+                            <Form.Field inline>
+                            <Form.Input
+                                icon='user'
+                                iconPosition='left'
+                                label='Username'
+                                placeholder='Username'
+                                    onChange={this.saveEditText}
 
-                                </Form.Group>
-                            </Form>
+                                />                              
+                            </Form.Field>
+                            <Form.Input
+                                icon='lock'
+                                iconPosition='left'
+                                label='Password'
+                                type='password'
+                                onChange={this.saveEditText}
+                            />                                                   
+                            <Button
+                                onClick={() => this.verify()}                 
+                                content='Login'
+                                primary
+                            />  
+                            
+                            <Divider horizontal></Divider>
+                            <Form.Field>
+                                <Button onClick={() => { this.setState({ showModal: true }); this.setState({ modalType: "View User" }); }} content='View User' primary />
+                            </Form.Field> 
                         </Form>
-
+                    </Grid.Column>
+                    <Grid.Column verticalAlign='middle'>
+                        <Modal.Actions>
+                            <Form.Field>
+                                <Button onClick={() => { this.setState({ showModal: true }); this.setState({ modalType: "Create User" }); }} content='Register' icon='signup' size='big'/>
+                            </Form.Field>
+                        </Modal.Actions>
                     </Grid.Column>
                 </Grid>
-
-
+                <Divider vertical></Divider>
                 {
-                    this.state.showModal && <JSmodal
+                    this.state.showModal && <ModalForm
                         closeModal={this.closeModal.bind(this)}//function
                         saveEditText={this.saveEditText.bind(this)}//function
                         editUser={this.editUser.bind(this)}//function
@@ -125,7 +124,11 @@ export class JSsample extends Component {
                         savedDetails={this.state.savedDetails}
                     />
                 }
-            </div>
-        );
+            </Segment>
+        )
     }
 }
+
+
+
+

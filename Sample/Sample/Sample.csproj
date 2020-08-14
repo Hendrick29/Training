@@ -21,6 +21,21 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="ClientApp\src\components\login.css" />
+    <None Remove="ClientApp\src\components\login.css" />
+    <None Remove="ClientApp\src\components\stylelogin.css" />
+    <None Remove="ClientApp\src\components\stylelogin.css" />
+    <None Remove="ClientApp\src\Sample\htmlpage.html" />
+    <None Remove="ClientApp\src\Sample\htmlpage.html" />
+    <None Remove="ClientApp\src\Sample\javamodal.js" />
+    <None Remove="ClientApp\src\Sample\javamodal.js" />
+    <None Remove="ClientApp\src\Sample\login.css" />
+    <None Remove="ClientApp\src\Sample\login.css" />
+    <None Remove="ClientApp\src\Sample\StyleSheet.css" />
+    <None Remove="ClientApp\src\Sample\StyleSheet.css" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

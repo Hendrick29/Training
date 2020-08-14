@@ -41,6 +41,7 @@ export class AddTutorial extends Component {
             }});
 
     }
+
     verify() {
         var object = this.state.userEditDetails;
         var object1 = this.state.savedDetails;
